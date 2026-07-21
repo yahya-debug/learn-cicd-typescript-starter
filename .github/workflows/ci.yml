@@ -19,7 +19,7 @@ jobs:
           node-version: 22
 
       - name: Install dependencies
-        run: npm install --no-frozen-lockfile
+        run: npm ci --no-frozen-lockfile
 
       - name: run tests
         run: npm run test

@@ -4,7 +4,7 @@ import { describe, expect, test } from "vitest";
 describe("auth", () => {
   test("authorization header is found", () => {
     const authHeader = {
-      Authorization: "Bearer Tok",
+      authorization: "ApiKey Tok",
     };
     expect(getAPIKey(authHeader)).toBeDefined();
   });

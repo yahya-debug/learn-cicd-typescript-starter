@@ -1,13 +1,11 @@
+import { getAPIKey } from "../api/auth.js";
 import { describe, expect, test } from "vitest";
 
-const person = undefined;
-
-describe("person", () => {
-  test("person is defined", () => {
-    expect(person).toBeDefined();
+describe("auth", () => {
+  test("authorization header is found", () => {
+    const authHeader = {
+      Authorization: "Bearer Tok",
+    };
+    expect(getAPIKey(authHeader)).toBeDefined();
   });
-
-  // test("is active", () => {
-  //   expect(person.isActive).toBeTruthy();
-  // });
 });
